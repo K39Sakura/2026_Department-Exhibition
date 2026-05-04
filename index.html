@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="test.css">
+
+  <title>第60回 苫小牧高専 学校祭 情報科学・工学系 学科展</title>
+</head>
+<body class="top">
+
+  <!-- トグル用チェックボックス -->
+  <input type="checkbox" id="sidebar-toggle" aria-label="Toggle menu">
+
+  <!-- サイドバー開閉アイコン -->
+  <label for="sidebar-toggle" class="sidebar-icon" role="button"></label>
+
+  <!-- サイドバー本体 -->
+  <nav class="sidebar">
+    <ol>
+      <li><a href="index.html" style="font-size: 20px;">TOP</a></li>
+      <li><a href="Guide_Map.html" style="font-size: 20px;">MAP</a></li>
+      <li>
+        <details>
+          <summary><a style="font-size: 20px;">展示紹介</a></summary>
+          <ol class="Exhibit_Introduction-menu">
+            <li><a href="robot.html" style="font-size:18px;">ロボット班</a></li>
+            <li><a href="VB.html" style="font-size:18px;">バーチャルボウリング班</a></li>
+            <li><a href="VR.html" style="font-size:18px;">VR班</a></li>
+            <li><a href="pin_ball.html" style="font-size:18px;">ピンボール班</a></li>
+            <li><a href="photo_booth.html" style="font-size:18px;">プリクラ班</a></li>
+            <li><a href="network_game.html" style="font-size:18px;" >ネットワークゲーム班</a></li>
+          </ol>
+        </details>
+      </li>
+      <li><a href="Comment.html" style="font-size: 20px;">学科展総括からの言葉</a></li>
+      <li><a href="survey.html" style="font-size: 20px;">アンケート</a></li>
+    </ol>
+  </nav>
+
+  <!-- ヘッダー -->
+  <header class="page header-page" id="page-header">
+    <x-sign>
+      <h1 style="font-size:30px; color: #fef4f4;">第60回 苫小牧高専 学校祭</h1> <!-- 桜色 -->
+      <h1 style="color: #fef4f4;">情報科学・工学系<br>学科展</h1> 
+    </x-sign>
+  </header>
+
+  <main>
+  <!-- コンテンツ -->
+    <div class="page content-page">
+      <section>
+        <h3>日程</h3>
+        <p>2025年 10月25日(<span style="color: blue;">土</span>) 10:30～16:00<br>10月26日(<span style="color: red;">日</span>) 9:00～15:00</p>
+      </section>
+      <section>
+        <h3>展示場所</h3>
+        <p>苫小牧工業高等専門学校 H棟(情報棟) 1階<br>北海道苫小牧市字錦岡443番地</p>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.8029473575416!2d141.49241351231623!3d42.62313497104945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f7514112b2979fb%3A0xa177907c0bead600!2z6Iur5bCP54mn5bel5qWt6auY562J5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1753775704354!5m2!1sja!2sjp"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <br>
+      </section>
+      <section>
+        <a href="https://www.tomakomai-ct.ac.jp/"><img src="photo/National_Institute_of_Technology,_Tomakomai_College_Logo.svg.png" style="display: block; margin: 0 auto; height:auto;" class="adaptive-img" alt="苫小牧高専ロゴ"></a>
+      </section>
+    </div>
+
+    <!-- JS（読み込み順：ライブラリ → 設定ファイル → sample.js） -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer></script>
+    <!-- <script src="js/sample.js"></script> -->
+
+    <script src="sample.js"></script>
+  </main>
+
+</body>
+</html>

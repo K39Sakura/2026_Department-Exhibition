@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>第60回 苫小牧高専 学校祭 情報科学・工学系 学科展 - プリクラ</title>
+
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="test.css">
+
+  <!-- SplideのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <!-- SplideのJavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</head>
+<body>
+
+  <!-- ☰ サイドバーのトグル -->
+  <input type="checkbox" id="sidebar-toggle" aria-label="Toggle menu">
+  <label for="sidebar-toggle" class="sidebar-icon" rule="button" aria-hidden="true"></label>
+
+  <!-- サイドバー本体 -->
+  <nav class="sidebar">
+    <ol>
+      <li><a href="index.html" style="font-size: 20px;">TOP</a></li>
+      <li><a href="Guide_Map.html" style="font-size: 20px;">MAP</a></li>
+      <li>
+        <details>
+          <summary><a style="font-size: 20px;">展示紹介</a></summary>
+          <ol class="Exhibit_Introduction-menu">
+            <li><a href="robot.html" style="font-size:18px;">ロボット班</a></li>
+            <li><a href="VB.html" style="font-size:18px;">バーチャルボウリング班</a></li>
+            <li><a href="VR.html" style="font-size:18px;">VR班</a></li>
+            <li><a href="pin_ball.html" style="font-size:18px;">ピンボール班</a></li>
+            <li><a href="photo_booth.html" style="font-size:18px;">プリクラ班</a></li>
+            <li><a href="network_game.html" style="font-size:18px;">ネットワークゲーム班</a></li>
+          </ol>
+        </details>
+      </li>
+      <li><a href="Comment.html" style="font-size: 20px;">学科展総括からの言葉</a></li>
+      <li><a href="survey.html" style="font-size: 20px;">アンケート</a></li>
+    </ol>
+  </nav>
+
+  <!-- コンテンツ本体 -->
+  <main >
+    <h2 style="text-align: center;">プリクラ</h2>
+    <img src="photo/photo_booth1.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="プリクラ展示画像">
+    <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">スタンプ・背景選択機能追加！</p>
+    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">私たちは、オリジナルのプリクラシステムを開発しました。このプリクラでは、友達やグループで撮った写真に落書きをして楽しくデコレーションできます。撮影した写真はその場で印刷できるので、思い出をすぐに持ち帰ることができます。</p>
+    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">さらに今年は、新機能として「スタンプ機能」と「背景選択機能」を追加しました。撮影後にスタンプを貼ったり、背景を自由に選んだりして、好みのスタイルに仕上げられるため、よりオリジナル感あふれるプリクラを楽しめます。</p>
+    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">ぜひ学科展で体験してみてください！</p>
+    <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">活動の様子</p>
+    <section id="image-carousel" class="splide" aria-label="プリクラ班写真">
+      <div class="splide__track">
+		    <ul class="splide__list">
+			    <li class="splide__slide">
+				    <img src="photo/photo_booth2.png" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="プリクラ展示画像">
+			    </li>
+			    <li class="splide__slide">
+				    <img src="photo/photo_booth3.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="プリクラ展示画像">
+			    </li>
+			    <li class="splide__slide">
+				    <img src="photo/photo_booth4.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="プリクラ展示画像">
+			    </li>
+			    <li class="splide__slide">
+				    <img src="photo/photo_booth5.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="プリクラ展示画像">
+			    </li>
+		    </ul>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#image-carousel', {type: 'loop',heightRatio: 0.75}).mount();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>第60回 苫小牧高専 学校祭 情報科学・工学系 学科展 - ネットワークゲーム</title>
+
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="test.css">
+  <!-- SplideのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <!-- SplideのJavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</head>
+<body>
+
+  <!-- ☰ サイドバーのトグル -->
+  <input type="checkbox" id="sidebar-toggle" aria-label="Toggle menu">
+  <label for="sidebar-toggle" class="sidebar-icon" rule="button" aria-hidden="true"></label>
+
+  <!-- サイドバー本体 -->
+  <nav class="sidebar">
+    <ol>
+      <li><a href="index.html" style="font-size: 20px;">TOP</a></li>
+      <li><a href="Guide_Map.html" style="font-size: 20px;">MAP</a></li>
+      <li>
+        <details>
+          <summary><a style="font-size: 20px;">展示紹介</a></summary>
+          <ol class="Exhibit_Introduction-menu">
+            <li><a href="robot.html" style="font-size:18px;">ロボット班</a></li>
+            <li><a href="VB.html" style="font-size:18px;">バーチャルボウリング班</a></li>
+            <li><a href="VR.html" style="font-size:18px;">VR班</a></li>
+            <li><a href="pin_ball.html" style="font-size:18px;">ピンボール班</a></li>
+            <li><a href="photo_booth.html" style="font-size:18px;">プリクラ班</a></li>
+            <li><a href="network_game.html" style="font-size:18px;">ネットワークゲーム班</a></li>
+          </ol>
+        </details>
+      </li>
+      <li><a href="Comment.html" style="font-size: 20px;">学科展総括からの言葉</a></li>
+      <li><a href="survey.html" style="font-size: 20px;">アンケート</a></li>
+    </ol>
+  </nav>
+
+  <!-- コンテンツ本体 -->
+  <main>
+    <h2 style="text-align: center;">ネットワークゲーム</h2>
+    <img src="photo/network_game1.jpeg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ネットワークゲーム展示画像">
+    <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">歴代ゲームが大集合！</p>
+    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">ネットワークゲーム班では、これまで制作してきた歴代のゲームから今年度の新作まで、自信作を多数展示しています！ お一人でじっくり楽しめるゲームから、友達やご家族と白熱できる対戦ゲームまで幅広く取り揃えており、どなたでも楽しめる展示です。</p>
+    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">ゲームを遊ぶ際のお願いとして、気持ちよく遊んでいただくため、以下の点にご協力をお願いします。</p>
+    <ul>
+      <li style="font-size: 115%; list-style-type: style type circle; line-height: 1.5; padding-left:0%; padding-right:18px;">コントローラーやPCなどの機材は丁寧に扱ってください。</li>
+      <li style="font-size: 115%; list-style-type: style type circle; line-height: 1.5; padding-left:0%; padding-right:18px;">他のお客様の迷惑となる行為（例：順番を守らない、長時間にわたるゲームの独占など）はお控えください。</li>
+    </ul>      
+    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">皆様のルールを守った楽しい体験を、班員一同お待ちしています！ ぜひ、私たちの作品を体験しに来てください！</p>
+    <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">活動の様子</p>
+    <section id="image-carousel" class="splide" aria-label="ネットワークゲーム班写真">
+      <div class="splide__track">
+		    <ul class="splide__list">
+			    <li class="splide__slide">
+				    <img src="photo/network_game2.jpeg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/network_game3.jpeg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/network_game4.jpeg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+          </li>
+		    </ul>
+      </div>
+    </section>
+    <br>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#image-carousel', {type: 'loop',heightRatio: 0.75}).mount();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>第60回 苫小牧高専 学校祭 情報科学・工学系 学科展</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="test.css">
+
+  <!-- SplideのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <!-- SplideのJavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</head>
+
+<body style="background-color: #d8d6d7;"><!--霞色-->
+
+  <!-- ☰ サイドバーのトグル -->
+  <input type="checkbox" id="sidebar-toggle" aria-label="Toggle menu">
+  <label for="sidebar-toggle" class="sidebar-icon" rule="button" aria-hidden="true"></label>
+
+  <!-- サイドバー本体 -->
+  <nav class="sidebar">
+    <ol>
+      <li><a href="index.html" style="font-size: 20px;">TOP</a></li>
+      <li><a href="Guide_Map.html" style="font-size: 20px;">MAP</a></li>
+      <li>
+        <details>
+          <summary><a style="font-size: 20px;">展示紹介</a></summary>
+          <ol class="Exhibit_Introduction-menu">
+            <li><a href="robot.html" style="font-size:18px;">ロボット班</a></li>
+            <li><a href="VB.html" style="font-size:18px;">バーチャルボウリング班</a></li>
+            <li><a href="VR.html" style="font-size:18px;">VR班</a></li>
+            <li><a href="pin_ball.html" style="font-size:18px;">ピンボール班</a></li>
+            <li><a href="photo_booth.html" style="font-size:18px;">プリクラ班</a></li>
+            <li><a href="network_game.html" style="font-size:18px;">ネットワークゲーム班</a></li>
+          </ol>
+        </details>
+      </li>
+      <li><a href="Comment.html" style="font-size: 20px;">学科展総括からの言葉</a></li>
+      <li><a href="survey.html" style="font-size: 20px;">アンケート</a></li>
+    </ol>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <h2>旧情報棟</h2>
+    <p>旧情報棟が気になった方、<br>スマホの画面設定が偶然ダークモードだった方、<br>ようこそ、隠しページへ……。</p>
+    <p>数枚の写真のみですが、<br>旧情報棟の雰囲気をお楽しみください。</p>
+    <!--<img src="photo/old_1.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="old_1">-->
+    <!--<br>-->
+    <!--<img src="photo/old_2.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="old_2">-->
+    <!--<br>-->
+    <!--<img src="photo/old_3.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="old_3">-->
+    <!--<br>-->
+    <section id="image-carousel" class="splide" aria-label="旧情報棟写真">
+      <div class="splide__track">
+		    <ul class="splide__list">
+			    <li class="splide__slide">
+				    <img src="photo/old_1.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="旧情報棟画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/old_2.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="旧情報棟画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/old_3.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="旧情報棟画像">
+          </li>
+		    </ul>
+      </div>
+    </section>
+    <br>
+    <div class="parent">
+      <div class="balloon">
+        <p>Thanks for looking♪</p>
+      </div>
+    </div>
+    <img src="photo/only_yamamoto.png" style="display: block; margin: 0 auto;" width="auto" height="50%" alt="only_yamamoto">
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#image-carousel', {type: 'loop',heightRatio: 0.75}).mount();
+    });
+  </script>
+</body>
+</html>
