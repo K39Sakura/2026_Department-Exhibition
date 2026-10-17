@@ -89,6 +89,12 @@ li {
     color: black;
     font-size:45px;
     text-align: center;
+    text-align: left;
+    font-size: 115%;
+    text-indent:18px;
+    line-height: 1.5;
+    padding-right:18px;
+    padding-left:18px;
   }
 
   .adaptive-img {
