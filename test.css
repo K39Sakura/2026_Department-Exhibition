@@ -20,14 +20,13 @@ h3{
 p{
   color: black;
   font-size:20px;
-  text-align: center;
-  text-align: center;
   text-align: left;
   font-size: 115%;
   text-indent:18px;
   line-height: 1.5;
   padding-right:18px;
   padding-left:18px;
+  text-indent: -1em;
 }
 
 
@@ -95,7 +94,6 @@ li {
   p{
     color: black;
     font-size:45px;
-    text-align: center;
     text-align: left;
     font-size: 115%;
     text-indent:18px;
@@ -133,7 +131,9 @@ li {
   p{
     color: black;
     font-size:16px;
-    text-align: center;
+    text-align: left;
+    padding-right:18px;
+    padding-left:18px;
   }
 }
 
