@@ -11,7 +11,7 @@ body {
 
 /* ハンバーガー／クローズアイコン */
 .sidebar-icon {
-  color:#080808;  /* アイコンの色を濡羽色に */
+  color: #080808;  /* アイコンの色 */
   position: fixed;
   top: 15px;
   left: 20px;
@@ -24,7 +24,8 @@ body {
 }
 
 .sidebar-icon.white-icon {
-  color: #fef4f4;   /* アイコンの色を桜色に */
+  color:#fffffe;   /* アイコンの色*/
+  /* pointer-events: none; 無効*/
 }
 
 .sidebar-icon::before {
