@@ -152,6 +152,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 /* カスタム背景やスタイル調整もここで */
@@ -167,7 +168,11 @@ html, body {
 }
 
 .content-page {
-  background-color: #f6f6f6;/*銀白色*//*月白色*f6f7f8?*/
+  overflow-y: auto;      /* はみ出たテキストや要素をこのページ内でスクロールさせる */
+  -webkit-overflow-scrolling: touch; /* スマホでのスクロールを滑らかにする */
+  height: auto;
+  min-height: 100vh; 
+  background-color: #f6f6f6;/*銀白色*/
   color: #333;
   padding: 30px;
 }
