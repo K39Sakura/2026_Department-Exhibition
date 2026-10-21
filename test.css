@@ -147,18 +147,19 @@ html, body {
 }
 
 .page {
-  height: 100vh; /* 1画面分の高さ */
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 /* カスタム背景やスタイル調整もここで */
 .header-page {
   /*margin: 0;*/
   /*padding: 10px;*/ /* 上下に少しだけ余白を残す */
+  height: 100vh; /* 1画面分の高さ */
   background-image: url("photo/jouhoutouiriguchi.jpg");
   background-size: cover;       /* 画像をヘッダー全体にフィットさせる */
   background-position: center;  /* 中央に配置 */
@@ -167,7 +168,11 @@ html, body {
 }
 
 .content-page {
-  background-color: #f6f6f6;/*銀白色*//*月白色*f6f7f8?*/
+  overflow-y: auto;      /* はみ出たテキストや要素をこのページ内でスクロールさせる */
+  -webkit-overflow-scrolling: touch; /* スマホでのスクロールを滑らかにする */
+  height: auto;
+  min-height: 100vh; 
+  background-color: #f6f6f6;/*銀白色*/
   color: #333;
   padding: 30px;
 }
