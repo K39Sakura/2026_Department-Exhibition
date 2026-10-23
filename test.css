@@ -334,7 +334,7 @@ x-sign:nth-of-type(1) {
 
 .header h2{
   margin: 0;
-  padding-top: 15px;
+  padding-top: 16px;
   line-height: 1;
 }
 
@@ -349,4 +349,16 @@ body.top .header {
 }
 body.top .header-page {
   margin-top: 0 !important;
+}
+
+.dark-only {
+  display: none !important;
+}
+
+/* ユーザーがダークモードを選択している場合 */
+@media (prefers-color-scheme: dark) {
+  .dark-only {
+    display: block !important;
+    margin: 0 auto;
+  }
 }
