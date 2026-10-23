@@ -351,14 +351,15 @@ body.top .header-page {
   margin-top: 0 !important;
 }
 
-.dark-only {
+/* 通常時（ライトモード）は箱ごと非表示 */
+.dark-box {
   display: none !important;
 }
 
-/* ユーザーがダークモードを選択している場合 */
+/* ダークモードのときだけ箱を表示して、中身を中央寄せにする */
 @media (prefers-color-scheme: dark) {
-  .dark-only {
+  .dark-box {
     display: block !important;
-    margin: 0 auto;
+    text-align: center; /* これで中の画像が真ん中に寄ります */
   }
 }
