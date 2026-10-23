@@ -12,15 +12,20 @@ body {
 /* ハンバーガー／クローズアイコン */
 .sidebar-icon {
   color: #080808;  /* アイコンの色 */
-  position: fixed;
-  top: 15px;
-  left: 20px;
-  width: 32px;
-  height: 32px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
   z-index: 1001;
   /*transition: color 0.0s;*/  /* 色がゆっくり変わる */
   transition: transform 0.0s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sidebar-icon.white-icon {
@@ -31,33 +36,37 @@ body {
 .sidebar-icon::before {
   content: "≡";
   font-size: 32px;
-  line-height: 32px;
+  line-height: 1;
   display: block;
   text-align: center;
+  margin-top: -3px;
 }
 
 @media screen and (max-width: 768px) {
   .sidebar-icon::before {
     font-size: 40px;
-    line-height: 40px;
+    line-height: 1;
+    margin-top: -4px;
   }
 }
 
 @media screen and (max-width: 420px) {
   .sidebar-icon::before {
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 36px;
+    line-height: 1;
+    margin-top: -5px; 
   }
 }
 
 /* チェックされると「✕」に変える */
 #sidebar-toggle:checked + .sidebar-icon::before {
   content: "✕";
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 1;
   display: block;
   text-align: center;
   color:#080808;  /* アイコンの色を濡羽色に */
+  margin-top: -2px;
 }
 
 /* サイドバー本体 */
@@ -168,3 +177,4 @@ details[open] > summary::after {
   display: block;
   margin: 0 auto;
 }
+
