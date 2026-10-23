@@ -10,36 +10,40 @@
   <link rel="stylesheet" href="test.css">
 </head>
 <body>
+  <header class="header">
+    <div class="header-inner">
+      <!-- ☰ サイドバートグル -->
+      <input type="checkbox" id="sidebar-toggle" aria-label="Toggle menu">
+      <label for="sidebar-toggle" class="sidebar-icon" rule="button" aria-hidden="true"></label>
 
-  <!-- ☰ サイドバートグル -->
-  <input type="checkbox" id="sidebar-toggle" aria-label="Toggle menu">
-  <label for="sidebar-toggle" class="sidebar-icon" rule="button" aria-hidden="true"></label>
+      <!-- サイドバー本体 -->
+      <nav class="sidebar">
+        <ol>
+          <li><a href="index.html" style="font-size: 20px;">TOP</a></li>
+          <li><a href="Guide_Map.html" style="font-size: 20px;">MAP</a></li>
+          <li>
+            <details>
+              <summary><a style="font-size: 20px;">展示紹介</a></summary>
+              <ol class="Exhibit_Introduction-menu">
+                <li><a href="robot.html" style="font-size:18px;">ロボット班</a></li>
+                <li><a href="VB.html" style="font-size:18px;">バーチャルボウリング班</a></li>
+                <li><a href="VR.html" style="font-size:18px;">visual班</a></li>
+                <li><a href="photo_booth.html" style="font-size:18px;">プリクラ班</a></li>
+                <li><a href="network_game.html" style="font-size:18px;">ネットワークゲーム班</a></li>
+              </ol>
+            </details>
+          </li>
+          <li><a href="Comment.html" style="font-size: 20px;">学科展総括からの言葉</a></li>
+          <li><a href="survey.html" style="font-size: 20px;">アンケート</a></li>
+        </ol>
+      </nav>
 
-  <!-- サイドバー本体 -->
-  <nav class="sidebar">
-    <ol>
-      <li><a href="index.html" style="font-size: 20px;">TOP</a></li>
-      <li><a href="Guide_Map.html" style="font-size: 20px;">MAP</a></li>
-      <li>
-        <details>
-          <summary><a style="font-size: 20px;">展示紹介</a></summary>
-          <ol class="Exhibit_Introduction-menu">
-            <li><a href="robot.html" style="font-size:18px;">ロボット班</a></li>
-            <li><a href="VB.html" style="font-size:18px;">バーチャルボウリング班</a></li>
-            <li><a href="VR.html" style="font-size:18px;">Visual班</a></li>
-            <li><a href="photo_booth.html" style="font-size:18px;">プリクラ班</a></li>
-            <li><a href="network_game.html" style="font-size:18px;">ネットワークゲーム班</a></li>
-          </ol>
-        </details>
-      </li>
-      <li><a href="Comment.html" style="font-size: 20px;">学科展総括からの言葉</a></li>
-      <li><a href="survey.html" style="font-size: 20px;">アンケート</a></li>
-    </ol>
-  </nav>
-
+      <h2 style="text-align: center;">アンケート</h2>
+    </div>
+  </header>
   <!-- メインコンテンツ -->
   <main>
-    <h2 style="text-align: center;">アンケート</h2>
+    
     <p style="text-align: left; font-size: 110%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">今回の展示に対する感想の協力をお願いしております。今後の参考にいたしますのでお時間のある時に以下からアクセスしてご回答ください。<br></p>
     <br>
     <div style="text-align: center;">

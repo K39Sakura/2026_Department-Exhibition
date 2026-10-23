@@ -311,3 +311,42 @@ x-sign:nth-of-type(1) {
   margin: 0;
   padding: 0;
 }
+
+/* ヘッダーの固定と透明化の設定 */
+.header {
+  position: fixed;        /* 画面にヘッダーを固定する */
+  top: 0;                 
+  left: 0;                /* 左端 */
+  width: 100%;           /* 幅 */
+  height: 60px;           /* ヘッダーの高さ */
+  background-color: #ffffff; 
+  z-index: 1000;          /* 他の要素より手前に表示する */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
+}
+
+.header__inner {
+  height: 60px;           /* ヘッダーと同じ高さ */
+  display: flex;
+  align-items: center;    /* 文字を上下中央にする */
+  justify-content: center;/* 文字を左右中央にする */
+  position: relative;     /* アイコンの位置の基準にする */
+}
+
+.header h2{
+  margin: 0;
+  padding-top: 15px;
+  line-height: 1;
+}
+
+/* ヘッダーが上に重なるため、メインコンテンツが隠れないように上の余白を空ける */
+main {
+  padding-top: 60px;      /* ヘッダーの高さと同じ分だけ空ける */
+}
+
+body.top .header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+body.top .header-page {
+  margin-top: 0 !important;
+}
