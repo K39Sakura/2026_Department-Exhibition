@@ -359,6 +359,6 @@ body.top .header-page {
 @media (prefers-color-scheme: dark) {
   .dark-only {
     display: block !important;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
 }
