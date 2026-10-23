@@ -160,7 +160,7 @@ html, body {
   /*margin: 0;*/
   /*padding: 10px;*/ /* 上下に少しだけ余白を残す */
   height: 100vh; /* 1画面分の高さ */
-  background-image: url("photo/map/jouhoutouiriguchi.jpg");
+  background-image: url("photo/map/jouhoutouiriguchi.webp");
   background-size: cover;       /* 画像をヘッダー全体にフィットさせる */
   background-position: center;  /* 中央に配置 */
   background-repeat: no-repeat; /* 繰り返しなし */
