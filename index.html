@@ -93,29 +93,69 @@
   </main>
  <script>
     document.addEventListener("DOMContentLoaded", () => {
-        // 1. localStorage から過去の訪問回数を取得（なければ0）
+        // 累計訪問回数（PV）の取得
         let totalSessions = parseInt(localStorage.getItem("total_sessions")) || 0;
+        // 累計セッション回数の取得
+        let sessionCount = parseInt(localStorage.getItem("session_count")) || 0;
+        // 現在のセッションがアクティブかどうかのフラグ
+        const isCurrentSessionActive = sessionStorage.getItem("current_session_active");
 
-        // 2. ページが読み込まれたら無条件でカウントを1増やす
+        // ページ読み込みで無条件にPVを+1
         totalSessions += 1;
-        
-        // 3. 新しいカウントを localStorage に保存
         localStorage.setItem("total_sessions", totalSessions);
 
-        console.log(`このページの累計訪問回数: ${totalSessions}`);
+        // 新しいセッション（タブやブラウザを開き直したとき）ならセッション数を+1
+        if (!isCurrentSessionActive) {
+            sessionCount += 1;
+            localStorage.setItem("session_count", sessionCount);
+            sessionStorage.setItem("current_session_active", "true");
+        }
 
-        // 4. 5の倍数回かどうかを判定する
-        if (totalSessions % 5 === 0) {
-            // 5の倍数回のときに表示したい写真のパス
-            const specialPhoto = "photo/general/2026special.webp"; 
-            
-            // クラス名「.header-page」がついた要素を取得
-            const headerPage = document.querySelector(".header-page");
-            
-            // 要素が存在する場合のみ、背景画像を書き換える
-            if (headerPage) {
-                headerPage.style.backgroundImage = `url("${specialPhoto}")`;
-                console.log("5の倍数回のため、写真を切り替えました。");
+        console.log(`[カウント] 累計訪問PV: ${totalSessions}回 / 累計セッション: ${sessionCount}回`);
+
+        const headerPage = document.querySelector(".header-page");
+
+        const titles = document.querySelectorAll(".header-page h1");
+
+        if (headerPage) {
+            // 7の倍数セッションのときの写真（優先）
+            if (sessionCount % 7 === 0) {
+                const sessionPhoto = "photo/general/2026special1.webp"; 
+                headerPage.style.backgroundImage = `url("${sessionPhoto}")`;
+                console.log("【判定】7の倍数セッションのため、セッション用写真に切り替えました。");
+            } 
+            // 5の倍数PVのときの写真
+            else if (totalSessions % 5 === 0) {
+                const pvPhoto = "photo/general/2026special2.webp";
+                titles.forEach(h1 => h1.style.color = "#000026");  
+                headerPage.style.backgroundImage = `url("${pvPhoto}")`;
+                console.log("【判定】5の倍数PVのため、PV用写真に切り替えました。");
+            }
+            // 11の倍数PVのときの写真
+            else if (totalSessions % 11 === 0) {
+                const pvPhoto = "photo/general/2026special3.webp";
+                headerPage.style.backgroundImage = `url("${pvPhoto}")`;
+                
+                // 文字をレインボーにする処理
+                if (titles) {
+                    titles.forEach(h1 => {
+                        // 1. 背景に虹色のグラデーションを設定
+                        h1.style.backgroundImage = "linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b0082)";
+                        // 2. グラデーションを文字の形にくり抜く
+                        h1.style.webkitBackgroundClip = "text";
+                        h1.style.backgroundClip = "text";
+                        // 3. 元の文字色を透明にして、後ろのグラデーションを透けさせる
+                        h1.style.webkitTextFillColor = "transparent";
+                        h1.style.color = "transparent";
+                    });
+                }
+                console.log("【判定】11の倍数PVのため、レインボー文字を適用しました。");
+            }
+
+            else {
+              const defaultPhoto = "photo/map/jouhoutouiriguchi.webp";
+              headerPage.style.backgroundImage = `url("${defaultPhoto}")`;
+              console.log("【判定】通常回のため、デフォルトの写真に戻しました。");
             }
         }
     });
