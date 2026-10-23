@@ -15,3 +15,4 @@ const callback = (entries => {
 });
     const observer = new IntersectionObserver(callback, { threshold: 0.5 })
     observer.observe(header);
+    
