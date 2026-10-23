@@ -91,6 +91,34 @@
 
     <script src="sample.js"></script>
   </main>
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // 1. localStorage から過去の訪問回数を取得（なければ0）
+        let totalSessions = parseInt(localStorage.getItem("total_sessions")) || 0;
 
+        // 2. ページが読み込まれたら無条件でカウントを1増やす
+        totalSessions += 1;
+        
+        // 3. 新しいカウントを localStorage に保存
+        localStorage.setItem("total_sessions", totalSessions);
+
+        console.log(`このページの累計訪問回数: ${totalSessions}`);
+
+        // 4. 5の倍数回かどうかを判定する
+        if (totalSessions % 5 === 0) {
+            // 5の倍数回のときに表示したい写真のパス
+            const specialPhoto = "photo/general/2026special.webp"; 
+            
+            // クラス名「.header-page」がついた要素を取得
+            const headerPage = document.querySelector(".header-page");
+            
+            // 要素が存在する場合のみ、背景画像を書き換える
+            if (headerPage) {
+                headerPage.style.backgroundImage = `url("${specialPhoto}")`;
+                console.log("5の倍数回のため、写真を切り替えました。");
+            }
+        }
+    });
+  </script>
 </body>
 </html>
