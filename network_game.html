@@ -15,57 +15,67 @@
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 <body>
+  <header class="header">
+    <div class="header-inner">
+      <!-- ☰ サイドバーのトグル -->
+      <input type="checkbox" id="sidebar-toggle" aria-label="Toggle menu">
+      <label for="sidebar-toggle" class="sidebar-icon" rule="button" aria-hidden="true"></label>
 
-  <!-- ☰ サイドバーのトグル -->
-  <input type="checkbox" id="sidebar-toggle" aria-label="Toggle menu">
-  <label for="sidebar-toggle" class="sidebar-icon" rule="button" aria-hidden="true"></label>
+      <!-- サイドバー本体 -->
+      <nav class="sidebar">
+        <ol>
+          <li><a href="index.html" style="font-size: 20px;">TOP</a></li>
+          <li><a href="Guide_Map.html" style="font-size: 20px;">MAP</a></li>
+          <li>
+            <details>
+              <summary><a style="font-size: 20px;">展示紹介</a></summary>
+              <ol class="Exhibit_Introduction-menu">
+                <li><a href="robot.html" style="font-size:18px;">ロボット班</a></li>
+                <li><a href="VB.html" style="font-size:18px;">バーチャルボウリング班</a></li>
+                <li><a href="VR.html" style="font-size:18px;">Visual班</a></li>
+                <li><a href="photo_booth.html" style="font-size:18px;">プリクラ班</a></li>
+                <li><a href="network_game.html" style="font-size:18px;">ネットワークゲーム班</a></li>
+              </ol>
+            </details>
+          </li>
+          <li><a href="Comment.html" style="font-size: 20px;">学科展総括からの言葉</a></li>
+          <li><a href="survey.html" style="font-size: 20px;">アンケート</a></li>
+        </ol>
+      </nav>
 
-  <!-- サイドバー本体 -->
-  <nav class="sidebar">
-    <ol>
-      <li><a href="index.html" style="font-size: 20px;">TOP</a></li>
-      <li><a href="Guide_Map.html" style="font-size: 20px;">MAP</a></li>
-      <li>
-        <details>
-          <summary><a style="font-size: 20px;">展示紹介</a></summary>
-          <ol class="Exhibit_Introduction-menu">
-            <li><a href="robot.html" style="font-size:18px;">ロボット班</a></li>
-            <li><a href="VB.html" style="font-size:18px;">バーチャルボウリング班</a></li>
-            <li><a href="VR.html" style="font-size:18px;">VR班</a></li>
-            <li><a href="photo_booth.html" style="font-size:18px;">プリクラ班</a></li>
-            <li><a href="network_game.html" style="font-size:18px;">ネットワークゲーム班</a></li>
-          </ol>
-        </details>
-      </li>
-      <li><a href="Comment.html" style="font-size: 20px;">学科展総括からの言葉</a></li>
-      <li><a href="survey.html" style="font-size: 20px;">アンケート</a></li>
-    </ol>
-  </nav>
-
+    
+      <h2 style="text-align: center;">ネットワークゲーム班</h2>
+    </div>
+  </header>
   <!-- コンテンツ本体 -->
   <main>
-    <h2 style="text-align: center;">ネットワークゲーム</h2>
-    <img src="photo/network_game1.jpeg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ネットワークゲーム展示画像">
-    <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">歴代ゲームが大集合！</p>
-    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">ネットワークゲーム班では、これまで制作してきた歴代のゲームから今年度の新作まで、自信作を多数展示しています！ お一人でじっくり楽しめるゲームから、友達やご家族と白熱できる対戦ゲームまで幅広く取り揃えており、どなたでも楽しめる展示です。</p>
-    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">ゲームを遊ぶ際のお願いとして、気持ちよく遊んでいただくため、以下の点にご協力をお願いします。</p>
-    <ul>
-      <li style="font-size: 115%; list-style-type: style type circle; line-height: 1.5; padding-left:0%; padding-right:18px;">コントローラーやPCなどの機材は丁寧に扱ってください。</li>
-      <li style="font-size: 115%; list-style-type: style type circle; line-height: 1.5; padding-left:0%; padding-right:18px;">他のお客様の迷惑となる行為（例：順番を守らない、長時間にわたるゲームの独占など）はお控えください。</li>
-    </ul>      
-    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">皆様のルールを守った楽しい体験を、班員一同お待ちしています！ ぜひ、私たちの作品を体験しに来てください！</p>
-    <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">活動の様子</p>
+    <img src="photo/network/network_game1.webp" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ネットワークゲーム展示画像">
+    <h3 style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">歴代ゲームが大集合！</h3>
+    <p>ネットワークゲーム班では、昨年度まで制作してきた歴代のゲームから今年度の新作まで、数多くの作品を展示しています！ お一人でじっくり楽しむゲームから、友達やご家族と白熱できる対戦ゲームまで幅広く取り揃えており、多くの方が楽しめる展示となっています。</p>
+
+    <section style="padding:0 30px 0 30px;margin-top: 0;">
+      <section style="border: 3px solid #ff3f3f; background-color: transparent; padding: 25px 20px 20px 20px; margin: 30px 0 20px 0; border-radius: 8px; font-family: sans-serif; position: relative;">
+        <h3  style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); margin: 0; padding: 0 10px; background-color: #ffffff; color: #000000; font-weight: bold; line-height: 1; white-space: nowrap;">体験に際するお願い</h3>
+        <ul style="margin: 0; padding-left: 24px; list-style-type: circle; color: #000000;">
+          <li style="font-size: 100%; line-height: 1.6; margin-bottom: 12px; margin-top: 0;">コントローラーやPCなどの機材は丁寧に扱ってください。</li>
+          <li style="font-size: 100%; line-height: 1.6;">他のお客様の迷惑となる行為（例：順番を守らない、長時間にわたるゲームの独占など）はお控えください。</li>
+        </ul>
+      </section>     
+    </section> 
+
+    <p>皆様のご来場を班員一同心よりお待ちしております！ぜひ、私たちの作品を体験しに来てください！</p>
+    <h3 style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">活動の様子</h3>
     <section id="image-carousel" class="splide" aria-label="ネットワークゲーム班写真">
       <div class="splide__track">
 		    <ul class="splide__list">
 			    <li class="splide__slide">
-				    <img src="photo/network_game2.jpeg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+				    <img src="photo/network/network_game_2026_01.webp" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
 			    </li>
           <li class="splide__slide">
-				    <img src="photo/network_game3.jpeg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+				    <img src="photo/network/network_game_2026_02.webp" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
 			    </li>
           <li class="splide__slide">
-				    <img src="photo/network_game4.jpeg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+				    <img src="photo/network/network_game_2026_03.webp" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
           </li>
 		    </ul>
       </div>
