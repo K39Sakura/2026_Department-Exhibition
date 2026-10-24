@@ -92,16 +92,30 @@
     <script src="sample.js"></script>
   </main>
 
-  <script src="https://gstatic.com"></script>
-  <script src="https://gstatic.com"></script>
+  <!-- 1. Firebase SDK (v8) の読み込み -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+
+  <!-- 2. アプリの処理 -->
   <script>
-    // 1. Firebaseの設定（自分のプロジェクトの値に置き換えます）
+    // Firebaseの正しい構成情報
     const firebaseConfig = {
-        apiKey: "AIzaSy...",
-        databaseURL: "https://departmentexhibition-26054-default-rtdb.asia-southeast1.firebasedatabase.app/",
-        projectId: "departmentexhibition-26054",
+      apiKey: "AIzaSyAsDwnzrpRAt4XKnkJ6p-XADg4mZJpZ8os",
+      authDomain: "departmentexhibition-26054.firebaseapp.com",
+      databaseURL: "https://departmentexhibition-26054-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "departmentexhibition-26054",
+      storageBucket: "departmentexhibition-26054.firebasestorage.app",
+      messagingSenderId: "490721339552",
+      appId: "1:490721339552:web:1b3336ffa2830402b5c1c5",
+      measurementId: "G-NRER7LL8TB"
     };
+
+    // Firebaseの初期化
     firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    // データベースオブジェクトの取得
     const database = firebase.database();
     const counterRef = database.ref('total_sessions');
 
@@ -127,7 +141,6 @@
         console.log(`[カウント] 累計訪問PV: ${totalSessions}回 / 累計セッション: ${sessionCount}回`);
 
         const headerPage = document.querySelector(".header-page");
-
         const titles = document.querySelectorAll(".header-page h1");
 
         if (headerPage) {
@@ -152,25 +165,22 @@
                 // 文字をレインボーにする処理
                 if (titles) {
                     titles.forEach(h1 => {
-                        // 1. 背景に虹色のグラデーションを設定
                         h1.style.backgroundImage = "linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b0082)";
-                        // 2. グラデーションを文字の形にくり抜く
                         h1.style.webkitBackgroundClip = "text";
                         h1.style.backgroundClip = "text";
-                        // 3. 元の文字色を透明にして、後ろのグラデーションを透けさせる
                         h1.style.webkitTextFillColor = "transparent";
                         h1.style.color = "transparent";
                     });
                 }
                 console.log("【判定】11の倍数PVのため、レインボー文字を適用しました。");
             }
-
             else {
               const defaultPhoto = "photo/map/jouhoutouiriguchi.webp";
               headerPage.style.backgroundImage = `url("${defaultPhoto}")`;
               console.log("【判定】通常回のため、デフォルトの写真に戻しました。");
             }
         }
+
         // リアルタイムで最新のカウントを取得して表示
         counterRef.on('value', (snapshot) => {
             const count = snapshot.val() || 0;
@@ -179,12 +189,10 @@
 
         // 新しいセッションが始まったら、Firebaseの数値を「+1」する
         if (!sessionStorage.getItem('session_counted')) {
-            
             // データベースの数値を安全に+1する機能（トランザクション）
             counterRef.transaction((currentCount) => {
                 return (currentCount || 0) + 1;
             });
-
             sessionStorage.setItem('session_counted', 'true');
         }
     });  
